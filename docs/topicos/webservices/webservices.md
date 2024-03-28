@@ -129,13 +129,19 @@ Certifique-se de implementar corretamente os casos de teste do exercício.
     código fonte do projeto [PW2 ConversionService](https://github.com/rpmhubdev/pw2-conversion)
     para obter um exemplo.
 
-## RESTFul Web Services (legado)
+## RESTFul Web Services
+
+Deprecated
+{: .label .label-red }
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PU8EhAHptlQ" title="RESTFul Web Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
-## XML Web Services (legado)
+## XML Web Services
+
+Deprecated
+{: .label .label-red }
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2nP7rzaIw5Y" title="XML Web Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -143,7 +149,7 @@ Certifique-se de implementar corretamente os casos de teste do exercício.
 
 Dúvidas na configuração do XML Web Service? seguem os arquivos de configuração [server.xml](server.xml) e [pom.xml](pom.xml) utilizados no vídeo.
 
-# Referências 📚
+## Referências 📚
 
 * Alex Soto Bueno; Jason Porter; [Quarkus Cookbook: Kubernetes-Optimized Java Solutions.](https://www.amazon.com.br/gp/product/B08D364VMD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08D364VMD&linkCode=as2&tag=rpmhub-20&linkId=2f82a4bb959a1797ec9791e0af68d1af) Editora: O'Reilly Media, 2020.
 

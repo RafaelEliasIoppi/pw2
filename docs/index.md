@@ -6,31 +6,21 @@ nav_order: 1
 
 # Programação para Web II 🖥️
 
-* [Instalação](topicos/quarkus-install/install.md)
+Conteúdo da disciplina de Programação para Web II do curso de Sistemas para
+Internet do IFRS em Porto Alegre. Este disciplina trata-se de programação para
+back-end, com foco em Micro serviços escritos em Quarkus e Jakarta EE. Assim,
+temas como Web Services, Rest Client, JWT(JSON Web Token), Health Check, Fault
+Tolerance, entre muitos outros, são abordados durante o decorrer da disciplina.
 
-* [Web Services](topicos/webservices/webservices.md)
+## Java/Jakarta EE
 
-* [Micro Serviços](topicos/microservices/introduction.md)
-
-* [Rest Client](topicos/rest-client/rest-client.md)
-
-* [JSON Web Token](topicos/jwt/jwt.md)
-
-* [Hibernate/Panache](topicos/jpa/hibernate.md)
-
-* [Config](topicos/configuration/configuration.md)
-
-* [Health](topicos/health/health.md)
-
-* [Fault tolerance](topicos/fault/fault.md)
-
-* [Metrics](topicos/metrics/metrics.md)
-
-* [Trace e Logging](topicos/logging/logging.md)
-
-Jakarta EE
 Deprecated
 {: .label .label-red }
+
+No passado, esta disciplina tinha o foco em componentes Java EE. Entretanto, com
+os avanços tecnológicos, a disciplina foi atualizada para abordar o Micro
+Serviços com Quarkus e Jakarta EE. Assim, fica como registro histórico os
+conteúdos antigos que eram ministrados na disciplina.
 
 * [Configuração do ambiente](topicos/ambiente/ambiente.md)
 
