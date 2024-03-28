@@ -11,7 +11,17 @@ Internet do IFRS em Porto Alegre. Este disciplina trata-se de programação para
 back-end, com foco em Micro serviços escritos em Quarkus e Jakarta EE. Assim,
 temas como Web Services, Rest Client, JWT(JSON Web Token), Health Check, Fault
 Tolerance, entre muitos outros, são abordados durante o decorrer da disciplina.
-{: .text-center }
+{: .text-left .fs-4 }
+
+## Comunidade da disciplina
+
+Comunidade da disciplina no [Discord](https://discord.com/invite/C29cqvm):
+canal `#pw2`
+
+## Conteúdo de terceiros
+
+* Essa página reúne [conteúdos](topicos/terceiros/terceiros.md) relevantes que
+  podem auxiliar no estudo e aprendizagem dos temas da disciplina.
 
 ## Enterprise Java Beans (EJB) 📦
 {: .fs-4 }
@@ -24,7 +34,6 @@ conteúdos antigos que eram ministrados na disciplina.
 
 Deprecated
 {: .label .label-red }
-
 
 * [Configuração do ambiente](topicos/ambiente/ambiente.md)
   {: .fs-3 }
@@ -47,15 +56,6 @@ Deprecated
   * [Message Driven](topicos/mdb/mdb.md)
   {: .fs-3 }
 
-## Comunidade da disciplina
-
-Comunidade da disciplina no [Discord](https://discord.com/invite/C29cqvm):
-canal `#pw2`
-
-## Conteúdo de terceiros
-
-* Essa página reúne [conteúdos](topicos/terceiros/terceiros.md) relevantes que
-  podem auxiliar no estudo e aprendizagem dos temas da disciplina.
 
 <center>
   <a href="https://rpmhub.dev" target="blanck">
