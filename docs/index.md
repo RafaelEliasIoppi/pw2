@@ -11,30 +11,41 @@ Internet do IFRS em Porto Alegre. Este disciplina trata-se de programação para
 back-end, com foco em Micro serviços escritos em Quarkus e Jakarta EE. Assim,
 temas como Web Services, Rest Client, JWT(JSON Web Token), Health Check, Fault
 Tolerance, entre muitos outros, são abordados durante o decorrer da disciplina.
+{: .text-center }
 
-### Java/Jakarta EE
-
-Deprecated
-{: .label .label-red }
+## Enterprise Java Beans (EJB) 📦
+{: .fs-4 }
 
 No passado, esta disciplina tinha o foco em componentes Java EE. Entretanto, com
 os avanços tecnológicos, a disciplina foi atualizada para abordar o Micro
 Serviços com Quarkus e Jakarta EE. Assim, fica como registro histórico os
 conteúdos antigos que eram ministrados na disciplina.
+{: .fs-3 }
+
+Deprecated
+{: .label .label-red }
+
 
 * [Configuração do ambiente](topicos/ambiente/ambiente.md)
+  {: .fs-3 }
 
 * [Enterprise Java Beans (EJB)](topicos/introducaoEJB/introducao.md)
+  {: .fs-3 }
 
   * [Session Beans](topicos/sessionbeans/sessionbeans.md)
+  {: .fs-3 }
 
   * [Stateless](topicos/stateless/stateless.md)
+  {: .fs-3 }
 
   * [Stateful](topicos/stateful/stateful.md)
+  {: .fs-3 }
 
   * [Singleton](topicos/singleton/singleton.md)
+  {: .fs-3 }
 
   * [Message Driven](topicos/mdb/mdb.md)
+  {: .fs-3 }
 
 ## Comunidade da disciplina
 
