@@ -302,7 +302,7 @@ um serviço para o outro. Veja o exemplo abaixo:
 public interface IPayment {
 ```
 
-# Hyper Text Transfer Protocol Secure (HTTPS)
+## Hyper Text Transfer Protocol Secure (HTTPS)
 
 Um dos problemas do JWT é que o token pode ser capturado, nesse caso, se faz
 necessário utilizar _Hyper Text Transfer Protocol Secure_ (HTTPS) para fazer
@@ -323,9 +323,19 @@ Para informar o caminho do arquivo keystore.jks adicione a seguinte propriedades
  do arquivo `application.properties` do Quarkus:
 
 ```
+    quarkus.http.ssl-port=8443
     quarkus.http.ssl.certificate.key-store-file=keystore.jks
-    quarkus.http.ssl-port=8443 // porta padrão para HTTPS
+    quarkus.http.ssl.certificate.key-store-password=password
 ```
+
+A propriedade `quarkus.http.ssl-port` é utilizada para informar a porta que o
+serviço irá escutar as requisições HTTPS que por padrão é a porta 8443. Para
+acessar o serviço utilize o endereço `https://localhost:8443`. A propriedade
+`quarkus.http.ssl.certificate.key-store-file` é utilizada para informar o
+caminho do arquivo keystore.jks e a propriedade
+`quarkus.http.ssl.certificate.key-store-password` é utilizada para informar a
+senha do arquivo keystore.jks, que foi informada no momento da criação do
+certificado.
 
 🚨 Nota, quando você estiver utilizando Rest Client se faz necessário utilizar a
 propriedade `quarkus.tls.trust-all` para que o cliente confie em certificados
