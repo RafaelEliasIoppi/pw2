@@ -14,6 +14,7 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import dev.rpmhub.client.Catalog;
 import dev.rpmhub.model.Book;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -37,6 +38,7 @@ public class ManagementWS {
     @GET
     @Path("/listBooks")
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("User")
     public List<Book> listBooksAvailable() {
         return catalog.listBooksAvailable();
     }
@@ -51,6 +53,7 @@ public class ManagementWS {
     @Path("/markNotAvailable")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("User")
     public List<Book> markNotAvailable(String json) {
         return catalog.markNotAvailable(json);
     }

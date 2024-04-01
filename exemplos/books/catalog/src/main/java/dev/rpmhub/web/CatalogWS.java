@@ -13,6 +13,7 @@ import java.util.List;
 
 import dev.rpmhub.model.Book;
 import io.vertx.core.json.JsonObject;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -40,6 +41,7 @@ public class CatalogWS {
     @GET
     @Path("/listBooksAvailable")
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("User")
     public List<Book> listBooksAvailable() {
         return books;
     }
@@ -54,6 +56,7 @@ public class CatalogWS {
     @Path("/markNotAvailable")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("User")
     public List<Book> markNotAvailable(String json) {
 
         JsonObject jsonObject = new JsonObject(json);
