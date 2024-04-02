@@ -57,7 +57,7 @@ conteúdos antigos que eram ministrados na disciplina.
 
 * Essa página reúne [conteúdos](topicos/terceiros/terceiros.md) relevantes que
   podem auxiliar no estudo e aprendizagem dos temas da disciplina.
-  {: .fs-2 }
+{: .fs-3 }
 
 <center>
   <a href="https://rpmhub.dev" target="blanck">
