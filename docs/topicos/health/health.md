@@ -137,7 +137,15 @@ Um código de exemplo desse documento pode ser encontrado no Github:
 git clone -b dev https://github.com/rodrigoprestesmachado/pw2
 code pw2/exemplos/health
 ```
-# Referências 📚
+
+## Exercício 🏋️
+
+No projeto da rede [social de empréstimo de livros](https://github.com/rodrigoprestesmachado/pw2/tree/dev/exemplos/books), adicione um Health Check no serviço management para verificar
+se o serviço de catálogos se encontra disponível. Dica: Crie um método no Web
+Service do serviço de catálogos para verificar se o serviço está disponível ou
+não e conecte o serviço de catálogos ao serviço de management.
+
+## Referências 📚
 
 * Alex Soto Bueno; Jason Porter; [Quarkus Cookbook: Kubernetes-Optimized Java Solutions.](https://www.amazon.com.br/gp/product/B08D364VMD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08D364VMD&linkCode=as2&tag=rpmhub-20&linkId=2f82a4bb959a1797ec9791e0af68d1af) Editora: O'Reilly Media, 2020.
 
