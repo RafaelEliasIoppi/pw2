@@ -24,7 +24,7 @@ import jakarta.ws.rs.core.MediaType;
 
 @RegisterRestClient(baseUri = "https://localhost:8445/catalog")
 @AccessToken
-public interface Catalog {
+public interface CatalogRC {
 
     @GET
     @Path("/listBooksAvailable")
@@ -38,4 +38,5 @@ public interface Catalog {
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed("User")
     List<Book> markNotAvailable(String json);
+
 }

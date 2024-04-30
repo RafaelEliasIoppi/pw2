@@ -12,7 +12,7 @@ import java.util.List;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import dev.rpmhub.client.Catalog;
+import dev.rpmhub.client.CatalogRC;
 import dev.rpmhub.model.Book;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
@@ -28,7 +28,7 @@ public class ManagementWS {
 
     @RestClient
     @Inject
-    Catalog catalog;
+    CatalogRC catalog;
 
     /**
      * Retrieves a list of available books.

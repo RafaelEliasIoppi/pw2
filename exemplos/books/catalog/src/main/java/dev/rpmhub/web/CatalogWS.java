@@ -72,6 +72,18 @@ public class CatalogWS {
     }
 
     /**
+     * Pings the service.
+     *
+     * @return a response
+     */
+    @GET
+    @Path("/ping")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String ping() {
+        return "Pong";
+    }
+
+    /**
      * Loads books into the catalog.
      */
     private void loadBooks() {
