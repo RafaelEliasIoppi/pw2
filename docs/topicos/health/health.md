@@ -11,15 +11,22 @@ nav_order: 9
     <iframe src="https://pw2.rpmhub.dev/topicos/health/slides/index.html#/" title="Microprofile Health" width="90%" height="500" style="border:none;"></iframe>
 </center>
 
-As verificações de Health checks são usadas para verificar o estado de um serviço. Esse tipo de recurso é propício para ambientes de infraestrutura em nuvem onde processos automatizados mantêm o estado de nós de computação (kubernetes por exemplo).
+As verificações de Health checks são usadas para verificar o estado de um serviço.
+Esse tipo de recurso é propício para ambientes de infraestrutura em nuvem onde
+processos automatizados mantêm o estado de nós de computação (kubernetes por
+exemplo).
 
-Nesse contexto, as verificações de integridade são usadas para determinar se um nó de computação precisa ser descartado/encerado e/ou eventualmente substituído por outra instância. Assim, o Health checks não se destina (embora possa ser usado) como uma solução de monitoramento de serviços para operadores humanos.
+Nesse contexto, essas verificações são usadas para determinar se um nó de
+computação precisa ser descartado/encerado e/ou eventualmente substituído por
+outra instância. Assim, o Health checks não se destina (embora possa ser usado)
+como uma solução de monitoramento de serviços para operadores humanos.
 
 Por padrão, o Quarkus utiliza a extensão [SmallRye Health](https://github.com/smallrye/smallrye-health/) como uma implementação da especificação [Microprofile Health](https://github.com/eclipse/microprofile-health).
 
-# Configuração no Quarkus
+## Configuração no Quarkus
 
-Para se criar um projeto Quarkus com recursos de Health checks abra um terminal de digite (linux, unix):
+Para se criar um projeto Quarkus com recursos de Health checks abra um terminal
+de digite (linux, unix):
 
     mvn io.quarkus.platform:quarkus-maven-plugin:2.4.1.Final:create \
         -DprojectGroupId=dev.pw2 \
@@ -28,7 +35,8 @@ Para se criar um projeto Quarkus com recursos de Health checks abra um terminal 
 
     code health
 
-Se você já tiver um projeto Quarkus e quiser instalar o `smallrye-health` digite na raiz do projeto:
+Se você já tiver um projeto Quarkus e quiser instalar o `smallrye-health` digite
+na raiz do projeto:
 
     ./mvnw quarkus:add-extension -Dextensions="smallrye-health"
 
@@ -41,7 +49,7 @@ Outra opção é adicionar no pom.xml a seguinte dependência:
 </dependency>
 ```
 
-# Implementação
+## Implementação
 
 A extensão `smallrye-health` irá habilitar _endpoints_, são eles:
 
@@ -78,49 +86,82 @@ Um exemplo dos dados retornados no _endpoint_ `/q/health` :
 }
 ```
 
-Uma classe que implementa uma verificação de _health_ deve ser decorada com `@ApplicationScoped` ou `@Singleton`. Estas anotações fazem com que seja criado uma única instância de um _bean_ que irá responder a todas as requisições de verificação de saúde. Se uma classe do bean não for decorada, então o escopo `@Singleton` é usado automaticamente, por exemplo:
+Uma classe que implementa uma verificação de _health_ deve ser decorada com
+`@ApplicationScoped` ou `@Singleton`. Estas anotações fazem com que seja criado
+uma única instância de um _bean_ que irá responder a todas as requisições de
+verificação de saúde. Se uma classe do bean não for decorada, então o escopo
+`@Singleton` é usado automaticamente, no momento da utilização das anotações
+`@Liveness` e `@Readiness`. Observe o exemplo abaixo:
 
 ```java
 @Liveness
-public class MyLivenessCheck implements HealthCheck {
+@Startup
+public class Live implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
-        return HealthCheckResponse.up("alive");
+        return HealthCheckResponse.up("Management is alive!");
     }
+
 }
 ```
 
-Como você pode ver, os procedimentos de verificação de integridade são definidos por meio de _beans_ que implementam a interface `HealthCheck` e que são decorados com uma das anotações de verificação de integridade, tais como:
+Como você pode ver, os procedimentos de verificação de integridade são definidos
+por meio de _beans_ que implementam a interface `HealthCheck` e que são
+decorados com uma das anotações de verificação de integridade, tais como:
 
-* `@Liveness` - faz com o que o bean responda no _endpoint_  `/q/health /live` e indique que o serviço está vivo(rodando).
-* `@Readiness` - faz com o que o bean responda no _endpoint_  `/q/health/ready` e indique que o serviço está pronto para receber requisições.
+* `@Liveness` - faz com o que o bean responda no _endpoint_  `/q/health /live` e
+  indique que o serviço está vivo(rodando).
+* `@Readiness` - faz com o que o bean responda no _endpoint_  `/q/health/ready`
+  e indique que o serviço está pronto para receber requisições.
+* `@Startup` - faz com que o bean seja instanciado no início da aplicação.
 
-Assim, para atender ao endpoint `/q/health/ready` você pode implementar, por exemplo, a classe `MyReadinessCheck.java` conforme o trecho de código abaixo:
+Assim, para atender ao endpoint `/q/health/ready` você pode implementar, por exemplo, a classe `Ready.java` conforme o trecho de código abaixo:
 
 ```java
 @Readiness
-public class MyReadinessCheck implements HealthCheck {
+public class Ready implements HealthCheck {
 
-    @Override
+    @Inject
+    @RestClient
+    PingRC service;
+
+     @Override
     public HealthCheckResponse call() {
-        HealthCheckResponseBuilder response = HealthCheckResponse.named("Database connection health check");
-
-        response.up().withData("key", "value");
-
-        // Para responder que o serviço está down
-        // response.down();
-
+        HealthCheckResponseBuilder response =
+            HealthCheckResponse.named(Ready.class.getName());
+        checkCatalogService(response);
         return response.build();
+    }
+
+    private HealthCheckResponseBuilder checkCatalogService(
+            HealthCheckResponseBuilder response) {
+        if (service.ping().equals("Pong")) {
+            response.up().withData("CatalogService", "up");
+        }
+        return response;
     }
 }
 ```
 
-Lembre-se de que a classe `MyReadinessCheck` é um bean Singleton pois não foi anotada. 🚨 Uma observação interessante, `javax.ejb.Singleton` são transacionais, porém, `javax.inject.Singleton` não são, ou seja, não suportam acessos concorrentes.
+Lembre-se de que a classe `Ready` é um bean Singleton pois não foi anotada.
+🚨 Uma observação interessante, `javax.ejb.Singleton` são transacionais, porém,
+`javax.inject.Singleton` não são, ou seja, não suportam acessos concorrentes.
 
-No exemplo da classe `MyReadinessCheck` utilizamos a um objeto `HealthCheckResponseBuilder` para verificar se o serviço está UP ou DOWN (métodos `up()` e `down()` do objeto `HealthCheckResponseBuilder`). Além disso, utilizamos o método `.withData` para adicionar alguma informação sobre a situação do serviço. Assim, de posse desses recursos, podemos realizar uma verificação na saúde do serviço, como por exemplo, verificar se a conexão com um banco de dados está ativa, e decidir informar se o serviço está com uma saúde em dia para processar informações.
+No exemplo acima, a classe `Ready` verifica se o serviço de catálogo está
+disponível. Para isso, a classe `Ready` injeta um Rest Client chamado do
+serviço de catálogo chamado `PingRC`. Assim, o método privado
+`checkCatalogService` verifica se o serviço de catálogo está disponível e
+retorna um objeto `HealthCheckResponseBuilder` com o status do serviço de
+catálogo. Logo, o método `call` retorna um objeto `HealthCheckResponse` com o
+status do serviço de catálogo.
 
-A extensão `smallrye-health` também pode criar uma URL `/q/health-ui` para que você observe as  verificações de saúde por meio de uma interface Web, conforme ilustra a Figura 1. A URL `/q/health-ui` é habilita por padrão nos modos de desenvolvimento e teste, porém, pode ser explicitamente configurada para o modo de produção se a propriedade do Quarkus `quarkus.smallrye-health.ui.enable=true` receber o valor `true`.
+A extensão `smallrye-health` também pode criar uma URL `/q/health-ui` para que
+você observe as  verificações de saúde por meio de uma interface Web, conforme
+ilustra a Figura 1. A URL `/q/health-ui` é habilita por padrão nos modos de
+desenvolvimento e teste, porém, pode ser explicitamente configurada para o
+modo de produção se a propriedade do Quarkus `quarkus.smallrye-health.ui.enable=true`
+receber o valor `true`.
 
     http://localhost:8080/q/health-ui/
 
@@ -135,15 +176,17 @@ Um código de exemplo desse documento pode ser encontrado no Github:
 
 ```sh
 git clone -b dev https://github.com/rodrigoprestesmachado/pw2
-code pw2/exemplos/health
+code pw2/exemplos/books
+
 ```
 
 ## Exercício 🏋️
 
 No projeto da rede [social de empréstimo de livros](https://github.com/rodrigoprestesmachado/pw2/tree/dev/exemplos/books), adicione um Health Check no serviço management para verificar
-se o serviço de catálogos se encontra disponível. Dica: Crie um método no Web
-Service do serviço de catálogos para verificar se o serviço está disponível ou
-não e conecte o serviço de catálogos ao serviço de management.
+se o serviço de usuários se encontra disponível. Como resolver: Crie um método
+no Web Service do serviço de usuários para verificar se o serviço está
+disponível e, por meio de um Rest Cliente, faça com que o serviço de
+management verifique se o serviço de usuários está disponível.
 
 ## Referências 📚
 
