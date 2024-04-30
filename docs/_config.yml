@@ -3,7 +3,7 @@ aux_links:
   "Moodle":
     - "https://moodle.poa.ifrs.edu.br/course/view.php?id=5779"
   "Github":
-    - "https://github.com/rodrigoprestesmachado/cpw2"
+    - "https://github.com/rodrigoprestesmachado/pw2"
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2024 <a href='https://rpmhub.dev'>RPM Hub</a>. Distributed by CC-BY-4.0 license."
