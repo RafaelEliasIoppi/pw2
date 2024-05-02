@@ -112,7 +112,8 @@ no vídeo [Quarkus CLI](https://www.youtube.com/watch?v=BL67jwPYvRs).
 
 ## Codespace 🚀
 
-Outra forma de se trabalhar com o Quarkus é por meio do [Codespace](https://github.com/features/codespaces) do GitHub. O Codespace é um ambiente de desenvolvimento que roda
+Outra forma de se trabalhar com o Quarkus é por meio do [Codespace](https://github.com/features/codespaces)
+do GitHub. O Codespace é um ambiente de desenvolvimento que roda
 na nuvem e que permite que você desenvolva, teste e depure o seu código
 diretamente do seu navegador. O Codespace utiliza o
 [Visual Studio Code](https://code.visualstudio.com) como editor de código e
@@ -121,10 +122,11 @@ permite que você instale diversas extensões como a do Quarkus.
 Para criar uma máquina no Codespace, procure a opção `Codespace` no seu
 menu do GitHub. Logo, procure um template em branco e clique em
 `Use this template`. Depois de criar uma máquina no Codespace, você pode
-acessá-lo por meio do navegador. Logo, crie um diretório chamado `devcontainer`
+acessá-lo por meio do navegador. Logo, crie um diretório chamado `.devcontainer`
 e, dentro desse diretório, adicione um arquivo chamado `devcontainer.json`.
-Copie e cope no arquivo `devcontainer.json` a [configuração](https://gist.github.com/rodrigoprestesmachado/84feb44d39bb944f4581cbb8c55e032d) do Quarkus para o
-Codespace.
+Copie e cope no arquivo `devcontainer.json` a [configuração](https://gist.github.com/rodrigoprestesmachado/84feb44d39bb944f4581cbb8c55e032d) do Quarkus para o Codespace abaixo:
+
+<script src="https://gist.github.com/rodrigoprestesmachado/84feb44d39bb944f4581cbb8c55e032d.js"></script>
 
 Depois de colar a configuração no arquivo `devcontainer.json`, pressione o
 atalho `ctrl + shift + p` e digite `Codespace: Rebuild Container`. Isso fará
