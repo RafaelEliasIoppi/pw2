@@ -4,24 +4,30 @@ title: Home
 nav_order: 1
 ---
 
-# Programação para Web II 🖥️
+# Programação para Web II
+
+[![Discord](https://img.shields.io/discord/717400933075648574?style=flat&label=Discord%20%23pw2&color=%235F86AF)](https://discord.gg/4meCsgkgpp)
 
 Conteúdo da disciplina de Programação para Web II do curso de Sistemas para
 Internet do IFRS em Porto Alegre. Este disciplina trata-se de programação para
 back-end, com foco em Micro serviços escritos em Quarkus e Jakarta EE. Assim,
 temas como Web Services, Rest Client, JWT(JSON Web Token), Health Check, Fault
 Tolerance, entre muitos outros, são abordados durante o decorrer da disciplina.
-{: .text-left .fs-3 }
+{: .fs-3 }
 
-## Comunidade 🤝
+## Comunidade
 
 Comunidade da disciplina no [Discord](https://discord.com/invite/C29cqvm):
 canal `#pw2`
 {: .fs-3 }
 
----
+## Conteúdo de terceiros
 
-## Enterprise Java Beans (EJB) 📦
+* Essa página reúne [conteúdos](topicos/terceiros/terceiros.md) relevantes que
+  podem auxiliar no estudo e aprendizagem dos temas da disciplina.
+{: .fs-3 }
+
+## Enterprise Java Beans (EJB)
 
 Deprecated
 {: .label .label-red }
@@ -52,12 +58,6 @@ conteúdos antigos que eram ministrados na disciplina.
 
   * [Message Driven](topicos/mdb/mdb.md)
   {: .fs-2 }
-
-## Conteúdo de terceiros
-
-* Essa página reúne [conteúdos](topicos/terceiros/terceiros.md) relevantes que
-  podem auxiliar no estudo e aprendizagem dos temas da disciplina.
-{: .fs-3 }
 
 <center>
   <a href="https://rpmhub.dev" target="blanck">
