@@ -142,7 +142,7 @@ máquina no Codespace com a configuração do Quarkus. Para rodar o projeto, abr
 um terminal e digite `quarkus dev`.
 
 <center>
-    <img src="img/projetobase.jpg" alt="Ilustração da opção para criar um codespace no projeto base a partir do branch main" width="400"/>
+    <img src="img/projetobase.png" alt="Ilustração da opção para criar um codespace no projeto base a partir do branch main" width="450"/>
     <br>
     Figura 2 - Projeto base no GitHub
 </center>

@@ -6,7 +6,7 @@ nav_order: 1
 
 # Programação para Web II
 
-[![Discord](https://img.shields.io/discord/717400933075648574?style=flat&label=Discord%20%23pw2&color=%235F86AF)](https://discord.gg/4meCsgkgpp)
+[![Static Badge](https://img.shields.io/badge/Discord%20-%20%23pw2%20-%20%237792C8)](https://discord.gg/4meCsgkgpp)
 
 Conteúdo da disciplina de Programação para Web II do curso de Sistemas para
 Internet do IFRS em Porto Alegre. Este disciplina trata-se de programação para
