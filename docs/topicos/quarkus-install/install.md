@@ -36,9 +36,9 @@ Para instalá-lo, abra um terminal e copie e cole o seguinte comando:
 
     curl -s "https://get.sdkman.io" | bash
 
-Com o SDKMAN instalado, utilize o seguinte comando para instalar o Java:
-
-    sdk install java
+No Windows, você terá que olhar a documentação do [SDKMAN](https://sdkman.io)
+para saber qual forma de instalação você irá preferir, por meio do Git Bash,
+ou do WSL (Windows Subsystem for Linux), por exemplo.
 
 O SDKMAN é uma ferramenta que permite a instalação de diversas versões do Java,
 tais como: OpenJDK, Oracle JDK, Temurin, GraalVM, etc. Assim, a grande vantagem
@@ -48,67 +48,40 @@ SDKMAN, por favor, consulte a [documentação](https://sdkman.io) da ferramenta.
 
 ## Quarkus IO
 
-Uma das formas mais fáceis de iniciar um projeto com o Quarkus é acessar o site
-[https://code.quarkus.io](https://code.quarkus.io) que disponibiliza uma
-ferramenta para configurar e baixar um projeto Quarkus inicial.
+Uma vez que você tenha um JDK instalado na sua máquina, uma das formas mais
+fáceis de iniciar um projeto com o Quarkus é acessar a página
+[https://code.quarkus.io](https://code.quarkus.io). Este _site_ disponibiliza
+uma ferramenta para configurar e baixar um projeto Quarkus inicial.
 
-Nesse site você pode escolher se quer que o seu projeto tenha as suas
+Assim, você poderá escolher se quer que o seu projeto tenha as suas
 dependências e ciclo de *build* gerenciado por meio do
 [Maven](https://maven.apache.org) ou [Gradle](https://gradle.org). Também é
 possível escolher as dependências necessárias para o projeto, como por exemplo,
 [RESTEasy JAX-RS](https://quarkus.io/guides/rest-json),
 [Hibernate com o Panache](https://quarkus.io/guides/hibernate-orm-panache),
 [Smallrye JWT](https://quarkus.io/guides/security-jwt) entre muitas outras.
-Caso você necessite de novas dependências para o seu projeto não se preocupe,
-pois, existem pelo menos mais duas formas de adicionar essas dependências
-(VSCode, Quarkus CLI, etc.) no tempo de desenvolvimento do sistema.
+Não se preocupe se caso você necessitar de novas dependências para o seu projeto,
+pois, existem pelo menos mais duas formas de adicionar essas dependências no
+tempo de desenvolvimento.
 
 <center>
     <img src="img/quarkusio.jpg" alt="Ilustração do site code.quarkus.io" width="400"/>
     <br>
-    Fig 1 - Site Quarkus.io
+    Fig 1 - Quarkus.io
 </center>
 
 Depois de configurar, o site irá permitir que você faça um *download* do projeto
  no formato `.zip`. Para executar o projeto, basta descompactar e, na raiz do
- projeto (localização do arquivo pom.xml) executar o comando do Maven:
+ projeto (localização do arquivo pom.xml) executar o comando:
 
     ./mvnw compile quarkus:dev
 
-## Quarkus no VSCode 🖥️
+O comando acima irá compilar o projeto e rodar a aplicação em modo de
+desenvolvimento. Para acessar a aplicação, abra o navegador e digite
+`http://localhost:8080`.
 
-A [extensão](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus)
-do Quarkus para o VSCode é uma ferramenta que permite que você crie,
-desenvolva, gerencie dependências, teste, etc. de aplicações Quarkus diretamente
-do seu editor de código. Para instalar a extensão, abra o VSCode e digite
-`Quarkus` na barra de pesquisa de extensões. A extensão oficial do Quarkus
-é a primeira opção que aparece na lista.
-
-Para, por exemplo, criar um novo projeto Quarkus, pressione `ctrl + shift + p`
-e digite `Quarkus: Create a Quarkus Project`. Isso fará com que o VSCode
-abre uma janela para que você possa escolher o gerenciador de dependências, a
-versão do Quarkus que você deseja utilizar, o nome do projeto, as dependências,
-entre outras configurações.
-
-## Quarkus CLI 📟
-
-Outra forma bastante útil de se trabalhar com o Quarkus é por meio de sua
-interface de linha de comando (_Command Line Interface_). Para instalar o
-Quarkus CLI, por meio do SDKMAN, digite o seguinte comando:
-
-    sdk install quarkus
-
-Faça um teste para ver se o Quarkus foi instalado corretamente:
-
-    quarkus --version
-
-Se você digitar `quarkus --help` será possível verificar todas as
-[funcionalidades do CLI](https://quarkus.io/guides/cli-tooling#using-the-cli),
-entre elas: criar um projeto (app ou linha de comando), fazer um *build*, rodar
-um projeto em modo de desenvolvimento, entre outros.
-
-Um resumo (em inglês) das funcionalidades do Quarkus CLI pode ser encontrado
-no vídeo [Quarkus CLI](https://www.youtube.com/watch?v=BL67jwPYvRs).
+O Maven Wrapper (`mvnw`) é uma ferramenta que permite que você execute o
+[Maven](https://maven.apache.org) sem a necessidade de instalá-lo na sua máquina.
 
 ## Codespace 🚀
 
@@ -122,9 +95,9 @@ permite que você instale diversas extensões como a do Quarkus.
 Para criar uma máquina no Codespace, procure a opção `Codespace` no seu
 menu do GitHub. Logo, procure um template em branco e clique em
 `Use this template`. Depois de criar uma máquina no Codespace, você pode
-acessá-lo por meio do navegador. Logo, crie um diretório chamado `.devcontainer`
-e, dentro desse diretório, adicione um arquivo chamado `devcontainer.json`.
-Copie e cope no arquivo `devcontainer.json` a [configuração](https://gist.github.com/rodrigoprestesmachado/84feb44d39bb944f4581cbb8c55e032d) do Quarkus para o Codespace abaixo:
+acessá-la por meio do navegador. Em seguida, crie um diretório oculto chamado
+ `.devcontainer` e, dentro desse diretório, adicione um arquivo com o nome
+ `devcontainer.json`. Copie e cope no arquivo `devcontainer.json` a [configuração](https://gist.github.com/rodrigoprestesmachado/84feb44d39bb944f4581cbb8c55e032d) do Quarkus para o Codespace abaixo:
 
 <script src="https://gist.github.com/rodrigoprestesmachado/84feb44d39bb944f4581cbb8c55e032d.js"></script>
 
@@ -135,18 +108,81 @@ acabou de adicionar.
 
 A configuração acima possui o Java 21, Maven, Docker e o Quarkus CLI. Além disso,
 o VSCode irá instalar várias extensões, entre elas o Java Extension Pack e o
-Quarkus.
+Quarkus para que o seu desenvolvimento seja mais confortável.
 
 ### Dicas 📌
 
-* Crie uma máquina com pelo menos 4 cores e 16GB de memória RAM pois, isto fará
+- Crie uma máquina com pelo menos 4 cores e 16GB de memória RAM pois, isto fará
 com que o seu desenvolvimento seja mais confortável no Codespaces. Para alterar
-a configuração pressione `ctrl + shift + p` e digite
-`Codespace: change machine type`. Neste sentido, utilize o [Github student pack](https://education.github.com/pack) para ter mais tempo de acesso a máquinas mais potentes no Codespace.
+a configuração pressione `ctrl + shift + p (ou F1)` e digite
+`Codespace: change machine type`. Porém, caso você opte por utilizar máquinas
+mais poderosas, solicite o [Github student pack](https://education.github.com/pack)
+para ter mais tempo de acesso a máquinas mais potentes no Codespace.
 
-* Uma segunda dica é abrir a porta 8080 no Codespace para que você possa acessar
-a aplicação por meio do navegador. Para isso, procure a aba `Ports` no Codespace
-e adicione a porta 8080.
+- Para rodar um projeto Quarkus no Codespace, abra um terminal e digite
+`quarkus dev`. Isso fará com que o Quarkus rode a aplicação em modo de
+desenvolvimento e você poderá acessar a aplicação por meio do navegador na porta
+8080.
+
+- Uma outra dica é abrir a porta 8080 no Codespace para que você possa acessar
+a sua aplicação por meio do navegador. Para isso, procure a aba `Ports` no
+VSCode e adicione a porta 8080 (privada ou pública).
+
+## Projeto Base 🚀
+
+Outra maneira de iniciar um novo projeto com o Quarkus é por meio do
+[projeto pw2](https://github.com/rpmhubdev/pw2) no GitHub. O pw2 é um
+projeto base que possui uma configuração do Codespace pronta. Neste caso, você
+poderá fazer um *fork* do [projeto pw2](https://github.com/rpmhubdev/pw2) para
+a sua conta e, em seguida, abrir no Codespace. Para abrir o projeto no Codespace,
+entre no [repositório do projeto](https://github.com/rpmhubdev/pw2) e clique
+no botão `Code` e, em seguida, clique em `Create codespace on main`. A Figura 2
+ilustra o botão `Create codespace on main`. Isso fará com que o GitHub crie uma
+máquina no Codespace com a configuração do Quarkus. Para rodar o projeto, abra
+um terminal e digite `quarkus dev`.
+
+<center>
+    <img src="img/projetobase.jpg" alt="Ilustração da opção para criar um codespace no projeto base a partir do branch main" width="400"/>
+    <br>
+    Figura 2 - Projeto base no GitHub
+</center>
+
+## Quarkus no VSCode 🖥️
+
+A [extensão](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-quarkus)
+do Quarkus para o VSCode é uma ferramenta que permite que você crie,
+desenvolva, gerencie dependências, teste, etc. de aplicações Quarkus diretamente
+do seu editor de código. Para instalar a extensão, abra o VSCode e digite
+`Quarkus` na barra de pesquisa de extensões. A extensão oficial do Quarkus
+é a primeira opção que aparece na lista. Nota: se você utilizar a configuração
+acima para o Codespace, essa extensão já vem instalada por padrão.
+
+Para, por exemplo, criar um novo projeto Quarkus, pressione `ctrl + shift + p`
+e digite `Quarkus: Create a Quarkus Project`. Isso fará com que o VSCode
+abre uma janela para que você possa escolher o gerenciador de dependências, a
+versão do Quarkus que você deseja utilizar, o nome do projeto, as dependências,
+entre outras configurações.
+
+## Quarkus CLI 📟
+
+Outra ferramenta útil para se trabalhar com o Quarkus é por meio de sua
+interface de linha de comando (_Command Line Interface_). Para instalar o
+Quarkus CLI, por meio do SDKMAN, digite o seguinte comando:
+
+    sdk install quarkus
+
+Faça um teste para ver se o Quarkus foi instalado corretamente:
+
+    quarkus --version
+
+Se você digitar `quarkus --help` será possível verificar todas as
+[funcionalidades do CLI](https://quarkus.io/guides/cli-tooling#using-the-cli),
+entre elas: criar um projeto (app ou linha de comando), fazer um *build*, rodar
+um projeto em modo de desenvolvimento, entre outros. Nota: se você utilizar a
+configuração acima para o Codespace, o Quarkus CLI já vem instalada por padrão.
+
+Um resumo (em inglês) das funcionalidades do Quarkus CLI pode ser encontrado
+no vídeo [Quarkus CLI](https://www.youtube.com/watch?v=BL67jwPYvRs).
 
 ### Maven (opcional) 🌐
 
@@ -160,7 +196,11 @@ Para instalar o Maven utilizando o SDKMAN, digite o seguinte comando:
 
     sdk install maven
 
-# Referências 📚
+Apesar dos projetos Quarkus já possuírem um _wrapper_ do Maven, o `mvnw`, é
+importante que você tenha o Maven instalado na sua máquina para que você possa
+utilizar o Maven em outros projetos Java.
+
+## Referências 📚
 
 * Quarkus IO. [Quarkus.io](https://quarkus.io/). Acesso em 2024.
 
