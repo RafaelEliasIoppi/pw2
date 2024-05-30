@@ -135,7 +135,7 @@ destino.
 
 <center>
 <a href="https://wiki.eclipse.org/File:Onetomany_map_fig.gif">
-<img src="https://wiki.eclipse.org/images/9/9e/Onetomany_map_fig.gif" width="35%" height="35%" />
+<img src="https://wiki.eclipse.org/images/9/9e/Onetomany_map_fig.gif" width="50%" height="50%" />
 </a> <br/>
 Figura 3 - Exemplo de relacionamento um para muitos da documentação do
 EclipseLink
@@ -219,7 +219,7 @@ gerenciar as associações entre os registros de origem e de destino.
 
 <center>
 <a href="https://wiki.eclipse.org/File:Mmmapfig.gif">
-<img src="https://wiki.eclipse.org/images/e/ef/Mmmapfig.gif" width="35%" height="35%" />
+<img src="https://wiki.eclipse.org/images/e/ef/Mmmapfig.gif" width="50%" height="50%" />
 </a><br/>
 Figura 4 - Exemplo de relacionamento muitos para muitos da documentação do
 EclipseLink
@@ -461,12 +461,12 @@ Codespaces.
 ## JSON Binding
 
 Jakarta EE inclui suporte para a especificação [Jakarta JSON Binding](https://eclipse-ee4j.github.io/jakartaee-tutorial/#json-binding)(JSON-B), que fornece uma API que pode
-serializar objetos Java para objetos JSON e desserializar JSON para Java.
+serializar objetos Java para objetos JSON e deserializar JSON para Java.
 {: .fs-3 }
 
 O processamento de JSON-B funciona bem com o JAX-RS (RESTful Web Services),
 basta acionar a anotação `@Produces(MediaType.APPLICATION_JSON)` (veja a
-implementação da classe `UserWS acima) em um método ou classe. Porém, em
+implementação da classe `UserWS` acima) em um método ou classe. Porém, em
 relacionamentos bidirecionais, existe um problema comum de geração de referência
  recursiva.
  {: .fs-3 }
