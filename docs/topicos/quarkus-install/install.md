@@ -132,20 +132,22 @@ VSCode e adicione a porta 8080 (privada ou pública).
 
 Outra maneira de iniciar um novo projeto com o Quarkus é por meio do
 [projeto pw2](https://github.com/rpmhubdev/pw2) no GitHub. O pw2 é um
-projeto base que possui uma configuração do Codespace pronta. Neste caso, você
-poderá fazer um *fork* do [projeto pw2](https://github.com/rpmhubdev/pw2) para
-a sua conta e, em seguida, abrir no Codespace. Para abrir o projeto no Codespace,
-entre no [repositório do projeto](https://github.com/rpmhubdev/pw2) e clique
-no botão `Code` e, em seguida, clique em `Create codespace on main`. A Figura 2
-ilustra o botão `Create codespace on main`. Isso fará com que o GitHub crie uma
-máquina no Codespace com a configuração do Quarkus. Para rodar o projeto, abra
-um terminal e digite `quarkus dev`.
+projeto [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#about-repository-templates) que possui uma
+configuração do Codespace pronta. Um projeto template é um repositório que
+permite que você [crie um novo repositório](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) com
+a mesma estrutura ou [abra o projeto no Codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-from-a-template#creating-a-codespace-from-a-template-repository).
+Click no ícone abaixo caso você queira abrir o projeto pw2 diretamente no
+Codespace:
 
-<center>
-    <img src="img/projetobase.png" alt="Ilustração da opção para criar um codespace no projeto base a partir do branch main" width="450"/>
-    <br>
-    Figura 2 - Projeto base no GitHub
-</center>
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&repo=rpmhubdev/pw2)
+
+Uma vez que o projeto esteja aberto, digite `quarkus dev` para rodar a aplicação
+em modo de desenvolvimento. Para acessar a aplicação, abra o navegador e digite
+`http://localhost:8080`.
+
+Depois de trabalhar com projeto template `pw2` por meio do Codespace, você pode
+optar por criar um repositório para o seu novo código e fazer um
+*push* do projeto modificado para a sua conta no GitHub.
 
 ## Quarkus no VSCode 🖥️
 
