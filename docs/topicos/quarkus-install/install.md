@@ -200,14 +200,40 @@ Apesar dos projetos Quarkus já possuírem um _wrapper_ do Maven, o `mvnw`, é
 importante que você tenha o Maven instalado na sua máquina para que você possa
 utilizar o Maven em outros projetos Java.
 
-## Referências 📚
-
-* Quarkus IO. [Quarkus.io](https://quarkus.io/). Acesso em 2024.
-
-* Alex Soto Bueno; Jason Porter; [Quarkus Cookbook: Kubernetes-Optimized Java Solutions.](https://www.amazon.com.br/gp/product/B08D364VMD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08D364VMD&linkCode=as2&tag=rpmhub-20&linkId=2f82a4bb959a1797ec9791e0af68d1af) Editora: O'Reilly Media, 2020.
-
+## Teste seus conhecimentos 🧠
 
 <center>
-<a href="https://rpmhub.dev" target="blanck"><img src="../../imgs/logo.png" alt="Rodrigo Prestes Machado" width="3%" height="3%" border=0 style="border:0; text-decoration:none; outline:none"></a><br/>
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0 DEED</a>
+    <iframe src="https://pw2.rpmhub.dev/topicos/quarkus-install/questions.html"
+        title="Instalação do Quarkus"
+        width="90%" height="500"
+        style="border:none;">
+    </iframe>
+</center>
+
+## Referências 📚
+
+- Quarkus IO. [Quarkus.io](https://quarkus.io/). Acesso em 2024.
+
+- Alex Soto Bueno; Jason Porter; [Quarkus Cookbook: Kubernetes-Optimized Java Solutions.](https://www.amazon.com.br/gp/product/B08D364VMD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08D364VMD&linkCode=as2&tag=rpmhub-20&linkId=2f82a4bb959a1797ec9791e0af68d1af) Editora: O'Reilly Media, 2020.
+
+<center>
+    <a
+        href="https://rpmhub.dev"
+        target="blanck"
+    >
+        <img
+            src="../../imgs/logo.png"
+            alt="Rodrigo Prestes Machado"
+            width="3%" height="3%"
+            border=0 style="border:0;
+            text-decoration:none;
+            outline:none"
+        >
+    </a>
+    <br>
+    <a
+        rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">
+        CC BY 4.0 DEED
+    </a>
 </center>

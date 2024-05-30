@@ -23,8 +23,6 @@ As principais anotações para aumento da resiliência do seu serviço são: `@R
 * `@Bulkhead` - O padrão bulkhead limita as operações que podem ser executadas ao mesmo tempo, mantendo as novas solicitações em espera, até que as solicitações de execução atuais possam termina.
 * `@CircuitBreaker` - Evita realizar chamadas desnecessárias se um erro ocorrer.
 
-# Configurações
-
 Inicialmente, crie um projeto que tenha suporte para tolerância a falhas:
 
 ```sh
@@ -274,8 +272,7 @@ disjuntor retorna ao estado fechado e as invocações são permitidas novamente.
 Se algumas invocações de sonda falharem, o disjuntor volta ao estado aberto e
 as invocações são impedidas.
 
-
-# Código 💡
+## Código 💡
 
 Um código de exemplo sobre Fault Tolerance está disponível no Github:
 
@@ -284,7 +281,17 @@ git clone -b dev https://github.com/rodrigoprestesmachado/pw2
 code pw2/exemplos/fault-tolerance
 ```
 
-# Referências 📚
+## Teste seus conhecimentos 🧠
+
+<center>
+    <iframe src="https://pw2.rpmhub.dev/topicos/fault/questions.html"
+        title="Fault Tolerance"
+        width="90%" height="500"
+        style="border:none;">
+    </iframe>
+</center>
+
+## Referências 📚
 
 * Alex Soto Bueno; Jason Porter; [Quarkus Cookbook: Kubernetes-Optimized Java Solutions.](https://www.amazon.com.br/gp/product/B08D364VMD/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08D364VMD&linkCode=as2&tag=rpmhub-20&linkId=2f82a4bb959a1797ec9791e0af68d1af) Editora: O'Reilly Media, 2020.
 

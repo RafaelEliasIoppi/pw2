@@ -1,50 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-	src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
-	</script>
-	<script>quizdown.init();</script>
-    <title>Questões</title>
+    <script src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    </script>
+    <script>quizdown.init();</script>
+    <title>Micro serviços</title>
 </head>
+
 <body>
     <div class="quizdown">
-        # O que são micro serviços?
-        - [ ] Um tipo de computador muito pequeno
-        - [x] Uma arquitetura de software onde uma aplicação é dividida em
-        componentes independentes
-        - [ ] Um tipo de serviço de entrega de comida
-        - [ ] Uma linguagem de programação
 
-        # Qual é uma vantagem dos micro serviços?
-        - [x] Maior modularidade e reusabilidade de código
-        - [ ] Maior overhead de comunicação
-        - [ ] Menor escalabilidade independente
-        - [ ] Maior consistência de dados
+        # O que caracteriza a arquitetura de micro serviços?
+        - [ ] Um único processo monolítico.
+        - [x] Divisão de uma aplicação em serviços independentes.
+        - [ ] Uso exclusivo de REST APIs.
+        - [ ] Dependência de uma única linguagem de programação.
 
-        # Qual é uma desvantagem dos micro serviços?
-        - [ ] Resiliência
-        - [ ] Custo de infraestrutura reduzido
-        - [x] Complexidade operacional aumentada
-        - [ ] Gerenciamento simplificado de versões
+        # Qual das opções a seguir NÃO é uma vantagem dos micro serviços?
+        - [ ] Escalabilidade independente.
+        - [ ] Resiliência.
+        - [x] Complexidade operacional.
+        - [ ] Desenvolvimento independente.
 
-        # O que pode ser um desafio ao testar sistemas baseados em micro
-        serviços?
-        - [ ] Testabilidade simplificada
-        - [ ] Menor complexidade de testes de integração
-        - [ ] Overhead de comunicação reduzido
-        - [x] Necessidade de testes de integração entre os diversos serviços
+        # Qual é uma desvantagem associada aos micro serviços?
+        - [ ] Time to _market_ rápido.
+        - [ ] Escalabilidade granular.
+        - [ ] Facilidade de deploy.
+        - [x] Overhead de comunicação.
 
-        # Como os micro serviços são acessados pelos usuários em uma
-        arquitetura típica?
-        - [ ] Diretamente através dos navegadores web
-        - [x] Através de um API Gateway
-        - [ ] Por meio de um servidor DNS
-        - [ ] Não podem ser acessados pelos usuários
+        # O que é coreografia em uma arquitetura de micro serviços?
+        - [ ] Um serviço central que coordena as ações dos demais serviços.
+        - [x] Cada micro serviço coordenando suas próprias ações.
+        - [ ] Um processo de automação de deploy.
+        - [ ] Uma técnica de monitoramento de micro serviços.
+
+        # Qual das seguintes tecnologias NÃO é tipicamente associada à arquitetura de micro serviços?
+        - [ ] Docker.
+        - [ ] REST APIs.
+        - [ ] Kubernetes.
+        - [x] Servlets.
+
+        # Qual iniciativa de código aberto visa acelerar a inovação em micro serviços baseados em Java?
+        - [ ] Spring Boot.
+        - [ ] Apache Kafka.
+        - [x] Eclipse MicroProfile.
+        - [ ] Node.js.
+
+        # Qual das seguintes opções descreve melhor a arquitetura cloud-native?
+        - [ ] Executa em servidores locais sem uso de contêineres.
+        - [x] Projetada para ser executada em ambientes de nuvem, usando contêineres e orquestradores.
+        - [ ] Depende exclusivamente de serviços REST.
+        - [ ] Usa monitores para otimizar o desempenho.
+
+        # Na arquitetura de micro serviços, qual protocolo de comunicação é comumente usado?
+        - [ ] FTP
+        - [ ] SMTP
+        - [x] HTTP
+        - [ ] POP3
+
+        # Qual dos seguintes é um exemplo de ferramenta de orquestração frequentemente usada com micro serviços?
+        - [ ] Jenkins
+        - [ ] GitLab CI/CD
+        - [x] Kubernetes
+        - [ ] Ansible
+
+        # Por que os micro serviços podem aumentar a resiliência de uma aplicação?
+        - [ ] Porque são mais fáceis de programar.
+        - [ ] Porque requerem menos recursos.
+        - [ ] Porque simplificam a arquitetura.
+        - [x] Porque a falha de um serviço não afeta os outros.
+
+        # Qual é a abordagem recomendada para a comunicação entre micro serviços?
+        - [ ] Sincronizada por padrão.
+        - [ ] Sempre via banco de dados compartilhado.
+        - [x] Comunicação via APIs RESTful.
+        - [ ] Integração através de um servidor centralizado.
+
 
     </div>
 </body>
+
 </html>

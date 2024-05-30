@@ -195,7 +195,7 @@ leve, modular e fácil de usar, e é adequado para construir aplicativos de micr
 serviços que são executados em ambientes de nuvem.
 {: .fs-3 }
 
-## Exercícios 📝
+## Teste seus conhecimentos 🧠
 
 <center>
     <iframe src="https://pw2.rpmhub.dev/topicos/microservices/questions.html"
