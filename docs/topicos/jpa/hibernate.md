@@ -41,10 +41,17 @@ diagrama de classes:
     Figura 2 - Diagrama de classes
 </center>
 
-Você pode obter o código fonte do diagrama de classes acima por meio do link:
+Você pode rodar e também alterar o exemplo que mostraremos a seguir por meio do
+link:
 {: .fs-3 }
 
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&repo=rpmhubdev/pw2-hibernate)
+
+Caso você queira fazer um fork do projeto e, posteriormente, clonar o
+repositório para a sua máquina, execute o comando abaixo:
+{: .fs-3 }
+
+    git clone https://github.com/rpmhubdev/pw2-hibernate
 
 ## Projeto Quarkus
 
@@ -69,7 +76,8 @@ você pode adicionar as seguintes dependências ao seu arquivo `pom.xml`:
 O Panache é uma extensão do Hibernate ORM que simplifica a implementação de
 entidades JPA. O Panache fornece um conjunto de classes que facilitam a
 implementação de consultas, persistência e atualização de objetos Java. Para
-saber mais sobre o Panache, acesse a [documentação oficial](https://quarkus.io/guides/hibernate-orm-panache).
+saber mais sobre o Panache, acesse a
+[documentação oficial](https://quarkus.io/guides/hibernate-orm-panache).
 {: .fs-3 }
 
 ## Mapeamento objeto relacional
@@ -145,12 +153,14 @@ A anotação `@OneToMany`possui os seguintes atributos:
 {: .fs-3 }
 
 * cascade - por padrão, o JPA não coloca em cascata nenhuma operação de
-  persistência para o destino da associação. Assim, as opções de cascateamento são: ALL, MERGE, PERSIST, REFRESH, REMOVE.
-* fetch - por padrão, o EclipseLink usa ou tipo de busca javax.persitence.FetchType.LAZY:
-  esta é uma dica para o provedor de persistência de que os dados devem ser
-  buscados lentamente quando são acessados pela primeira vez (se possível).
-  Defina, o fetch para FetchType.EAGER se o requisito necessitar que os dados
-  sejam buscados imediatamente.
+  persistência para o destino da associação. Assim, as opções de cascateamento
+  são: ALL, MERGE, PERSIST, REFRESH, REMOVE.
+* fetch - por padrão, o EclipseLink usa ou tipo de busca
+  javax.persitence.FetchType.LAZY: esta é uma dica para o provedor de
+  persistência de que os dados devem ser buscados lentamente quando são
+  acessados pela primeira vez (se possível). Defina, o fetch para
+  FetchType.EAGER se o requisito necessitar que os dados sejam buscados
+  imediatamente.
 * mappedBy - por padrão, se o relacionamento for unidirecional, o provedor de
   persistência EclipseLink determina o campo que possui o relacionamento. Porém,
   se o relacionamento for bidirecional, se faz necessário definir o defina o
