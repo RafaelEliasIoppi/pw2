@@ -633,3 +633,4 @@ List<User> users = (List<User>) query.getResultList();
         CC BY 4.0 DEED
     </a>
 </center>
+{: .fs-3 }
