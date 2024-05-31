@@ -28,6 +28,7 @@ implementa mais funcionalidades do que aqueles especificados pela JPA, a figura
     <img src="https://docs.jboss.org/hibernate/orm/5.6/userguide/html_single/images/architecture/data_access_layers.svg" alt="Diagrama de classes" width="40%" height="40%"/> <br/>
     Figura 1 - Visão geral sobre o Hibernate
 </center>
+{: .fs-3 }
 
 ## Como implementar?
 
@@ -39,8 +40,8 @@ diagrama de classes:
 <center>
     <img src="http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/rodrigoprestesmachado/pw2/master/docs/topicos/jpa/uml.puml" alt="Diagrama de classes" width="25%" height="25%"/> <br/>
     Figura 2 - Diagrama de classes
-    {: .fs-3 }
 </center>
+{: .fs-3 }
 
 Você pode rodar e também alterar o exemplo que mostraremos a seguir por meio do
 link:
@@ -149,8 +150,8 @@ destino.
 </a> <br/>
 Figura 3 - Exemplo de relacionamento um para muitos da documentação do
 EclipseLink
-{: .fs-3 }
 </center>
+{: .fs-3 }
 
 A anotação `@OneToMany`possui os seguintes atributos:
 {: .fs-3 }
@@ -236,8 +237,8 @@ gerenciar as associações entre os registros de origem e de destino.
 </a><br/>
 Figura 4 - Exemplo de relacionamento muitos para muitos da documentação do
 EclipseLink
-{: .fs-3 }
 </center>
+{: .fs-3 }
 
 A anotação `@ManyToOne` possui os seguintes atributos:
 {: .fs-3 }
