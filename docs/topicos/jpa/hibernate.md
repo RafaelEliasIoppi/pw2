@@ -48,10 +48,10 @@ link:
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&repo=rpmhubdev/pw2-hibernate)
 
 Caso você queira fazer um fork do projeto e, posteriormente, clonar o
-repositório para a sua máquina, execute o comando abaixo:
+repositório para a sua máquina, o endereço do repositório é o seguinte:
 {: .fs-3 }
 
-    git clone https://github.com/rpmhubdev/pw2-hibernate
+[https://github.com/rpmhubdev/pw2-hibernate](https://github.com/rpmhubdev/pw2-hibernate)
 
 ## Projeto Quarkus
 
