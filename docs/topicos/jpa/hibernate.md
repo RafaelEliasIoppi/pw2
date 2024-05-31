@@ -39,6 +39,7 @@ diagrama de classes:
 <center>
     <img src="http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/rodrigoprestesmachado/pw2/master/docs/topicos/jpa/uml.puml" alt="Diagrama de classes" width="25%" height="25%"/> <br/>
     Figura 2 - Diagrama de classes
+    {: .fs-3 }
 </center>
 
 Você pode rodar e também alterar o exemplo que mostraremos a seguir por meio do
@@ -52,6 +53,7 @@ repositório para a sua máquina, o endereço do repositório é o seguinte:
 {: .fs-3 }
 
 [https://github.com/rpmhubdev/pw2-hibernate](https://github.com/rpmhubdev/pw2-hibernate)
+{: .fs-3 }
 
 ## Projeto Quarkus
 
@@ -147,6 +149,7 @@ destino.
 </a> <br/>
 Figura 3 - Exemplo de relacionamento um para muitos da documentação do
 EclipseLink
+{: .fs-3 }
 </center>
 
 A anotação `@OneToMany`possui os seguintes atributos:
@@ -233,6 +236,7 @@ gerenciar as associações entre os registros de origem e de destino.
 </a><br/>
 Figura 4 - Exemplo de relacionamento muitos para muitos da documentação do
 EclipseLink
+{: .fs-3 }
 </center>
 
 A anotação `@ManyToOne` possui os seguintes atributos:
@@ -393,7 +397,7 @@ comandos dessa implementação.
 Se você chegou até aqui, basta executar o projeto quarkus no terminal:
 {: .fs-3 }
 
-    ./mvnw compile quarkus:dev
+  ./mvnw compile quarkus:dev
 
 Como não fizemos nenhuma configuração de banco de dados, o Quarkus irá
 automaticamente baixar uma imagem e irá executar um banco de dados MySQL 🐬 por
@@ -423,16 +427,18 @@ dados por meio do arquivo `src/main/resources/application.properties`, como por
 exemplo:
 {: .fs-3 }
 
-    #MyQL
-    quarkus.datasource.db-kind=mysql
-    quarkus.datasource.username=pw2
-    quarkus.datasource.password=pw2
-    quarkus.hibernate-orm.database.generation=create
-    %dev.quarkus.datasource.devservices.port=3306
-    #quarkus.datasource.jdbc.url=jdbc:mysql://localhost:3306/hibernate
+```properties
+  #MyQL
+  quarkus.datasource.db-kind=mysql
+  quarkus.datasource.username=pw2
+  quarkus.datasource.password=pw2
+  quarkus.hibernate-orm.database.generation=create
+  %dev.quarkus.datasource.devservices.port=3306
+  #quarkus.datasource.jdbc.url=jdbc:mysql://localhost:3306/hibernate
 
-    #Swagger
-    %dev.quarkus.swagger-ui.always-include=true
+  #Swagger
+  %dev.quarkus.swagger-ui.always-include=true
+```
 
 Se você necessitar de um banco de dados MySQL, você poderá utilizar o Docker
 compose abaixo. Crie um arquivo na raiz do seu projeto chamado `docker-compose.yml`
@@ -440,7 +446,7 @@ e cole o conteúdo abaixo. Depois de criar o arquivo, abra um terminar e, no
 mesmo diretório do seu projeto, execute o comando para iniciar o container:
 {: .fs-3 }
 
-    docker-compose up -d
+  docker-compose up -d
 
 ```yml
 version: "3.7"
@@ -606,6 +612,23 @@ List<User> users = (List<User>) query.getResultList();
 {: .fs-3 }
 
 <center>
-<a href="https://rpmhub.dev" target="blanck"><img src="../imgs/logo.png" alt="Rodrigo Prestes Machado" width="3%" height="3%" border=0 style="border:0; text-decoration:none; outline:none"></a><br/>
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0 DEED</a>
+    <a
+        href="https://rpmhub.dev"
+        target="blanck"
+    >
+        <img
+            src="../../imgs/logo.png"
+            alt="Rodrigo Prestes Machado"
+            width="3%" height="3%"
+            border=0 style="border:0;
+            text-decoration:none;
+            outline:none"
+        >
+    </a>
+    <br>
+    <a
+        rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">
+        CC BY 4.0 DEED
+    </a>
 </center>
