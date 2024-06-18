@@ -342,16 +342,6 @@ git clone -b dev https://github.com/rodrigoprestesmachado/pw2
 code pw2/exemplos/fault-tolerance
 ```
 
-## Teste seus conhecimentos 🧠
-
-<center>
-    <iframe src="https://pw2.rpmhub.dev/topicos/fault/questions.html"
-        title="Fault Tolerance"
-        width="90%" height="500"
-        style="border:none;">
-    </iframe>
-</center>
-
 ## Exercício Prático 🏋️
 
 Na aplicação de [gerenciamento de livros](https://github.com/rpmhubdev/pw2-books),
@@ -368,6 +358,16 @@ Para realizar o exercício prático, você pode abrir diretamente no Codespaces:
 Alternativamente, você pode fazer um `fork` do projeto para a sua conta e,
 posteriormente, clonar para a sua máquina:
 {: .fs-3 }
+
+## Teste seus conhecimentos 🧠
+
+<center>
+    <iframe src="https://pw2.rpmhub.dev/topicos/fault/questions.html"
+        title="Fault Tolerance"
+        width="90%" height="500"
+        style="border:none;">
+    </iframe>
+</center>
 
 ## Referências 📚
 
